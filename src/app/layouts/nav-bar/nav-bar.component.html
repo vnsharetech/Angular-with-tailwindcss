@@ -14,45 +14,48 @@
 </div>
 <div class="border-gray-300 border-t border-b ">
   <div class="container mx-auto max-w-screen-lg px-4">
-    <ul class="md:flex md:text-center text-sm main-menu ">
+    <div class="text-right py-3">
+      <button type="button" class="bg-black text-white px-4 py-2 md:hidden" (click)="triggerMenuMobile()"><i class="fas fa-bars"></i></button>
+    </div>
+    <ul class="md:flex md:text-center text-sm main-menu {{showMenuMobile? '': 'hidden'}} md:block">
       <li class="flex-1 md:text-left active">
         <a [routerLink]="['dash-board']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" title="Dash board"
-          class="hover:text-red-400 border-transparent py-4 inline-block hover:border-red-500 border-b">
+          class="hover:text-red-400 border-transparent py-4 block md:inline-block hover:border-red-500 border-b">
           <i class="fas fa-compress mr-1"></i>
           Dash board
         </a>
       </li>
       <li class="flex-1">
         <a [routerLink]="['reservation']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" title="Reservation"
-          class="hover:text-red-400 py-4 border-transparent inline-block hover:border-red-500 border-b">
+          class="hover:text-red-400 py-4 border-transparent  block md:inline-block hover:border-red-500 border-b">
           <i class="fal fa-tv mr-1"></i>
           Reservation
         </a>
       </li>
       <li class="flex-1">
         <a [routerLink]="['food-menu']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" title="Food Menu"
-          class="hover:text-red-400 py-4 border-transparent inline-block hover:border-red-500 border-b">
+          class="hover:text-red-400 py-4 border-transparent  block md:inline-block hover:border-red-500 border-b">
           <i class="fas fa-utensils mr-1"></i>
           Food Menu
         </a>
       </li>
       <li class="flex-1">
         <a [routerLink]="['employeer']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" title="Employeer"
-          class="hover:text-red-400 py-4 border-transparent inline-block hover:border-red-500 border-b">
+          class="hover:text-red-400 py-4 border-transparent  block md:inline-block hover:border-red-500 border-b">
           <i class="fas fa-user-tie mr-1"></i>
           Employeer
         </a>
       </li>
       <li class="flex-1">
         <a [routerLink]="['accounting']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" title="Accounting"
-          class="hover:text-red-400 py-4 border-transparent inline-block hover:border-red-500 border-b">
+          class="hover:text-red-400 py-4 border-transparent  block md:inline-block hover:border-red-500 border-b">
           <i class="fal fa-university mr-1"></i>
           Accounting
         </a>
       </li>
       <li class="flex-1 md:text-right">
         <a [routerLink]="['help-center']" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" title="Help Center"
-          class="hover:text-red-400 py-4 border-transparent inline-block hover:border-red-500 border-b">
+          class="hover:text-red-400 py-4 border-transparent  block md:inline-block hover:border-red-500 border-b">
           <i class="far fa-question-circle mr-1"></i>
           Help Center
         </a>

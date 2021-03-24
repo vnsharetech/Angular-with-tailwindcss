@@ -6,6 +6,7 @@ import { Component, OnInit } from "@angular/core";
 })
 export class NavbarComponent implements OnInit {
 
+  showMenuMobile = false;
   constructor(
   ) { }
 
@@ -13,4 +14,7 @@ export class NavbarComponent implements OnInit {
 
   }
 
+  triggerMenuMobile = () => {
+    this.showMenuMobile = !this.showMenuMobile;
+  }
 }
