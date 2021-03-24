@@ -8,7 +8,24 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    theme: {
+      extend: {
+         boxShadow: {
+          'gray-1': '0px 0px 20px rgb(0 0 0 / 30%)',
+         },
+         borderColor: theme => ({
+          ...theme('colors'),
+         })
+      },
+       backgroundColor: theme => ({
+        ...theme('colors'),
+        'brown1': '#97918a',
+       }),
+       textColor:  theme => ({
+        ...theme('colors')
+       }),
+       
+    },
   },
   variants: {},
   plugins: [],
